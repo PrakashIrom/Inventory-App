@@ -47,6 +47,9 @@ abstract class InventoryDatabase: RoomDatabase() {
                     .build()
                     .also { Instance = it }
             }
+
+            //Using fallbackToDestructiveMigration() means losing all your existing recipes (data) in the database.
+        // It's like throwing away all your old recipes whenever you update your cookbook app.
         }
 
     }

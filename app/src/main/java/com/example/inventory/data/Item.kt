@@ -26,6 +26,10 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "items")
 data class Item(
+
+    //When autoGenerate = true is set, the primary key field (in this case, id) is automatically assigned a unique value by
+    // the database whenever a new row is inserted into the table. This is useful for ensuring that each row in the table has
+    // a unique identifier without requiring the application to manually assign these values.
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val name: String,
